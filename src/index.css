@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-display: "Georgia", "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-zinc-850: #121212;
+  --color-zinc-950: #0a0a0a;
+}
+
+/* Base custom styles to support fluid layout animations */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #0A0A0A;
+}
+
+body {
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  @apply transition-colors duration-300;
+}
+
+/* Custom serif class */
+.serif {
+  font-family: "Georgia", "Playfair Display", serif;
+}
+
+/* Custom letter spacing classes to match Sophisticated Dark */
+.tracking-widest {
+  letter-spacing: 0.25em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.15em;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #1A1A1A 0%, #0A0A0A 100%);
+}
+
+.border-thin {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.product-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Glassmorphism utility updated for Sophisticated Dark */
+.glass-panel {
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .glass-panel {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Custom horizontal line effects */
+.marquee-line {
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
